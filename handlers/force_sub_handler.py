@@ -30,7 +30,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
         if user.status == "kicked":
             await bot.send_message(
                 chat_id=cmd.from_user.id,
-                text="Sorry Sir, You are Banned to use me. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/VJ_Bot_Disscussion).",
+                text="Sorry Sir, You are Banned To Use Me. Contact My [𝗢𝘄𝗻𝗲𝗿](https://t.me/DRDIC).",
                 disable_web_page_preview=True
             )
             return 400
@@ -42,8 +42,8 @@ async def handle_force_sub(bot: Client, cmd: Message):
             return 200
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**\n\n"
-                 "Due to Overload, Only Channel Subscribers can use this Bot!",
+            text="**Please Join My Updates Channel To Use This Bot!**\n\n"
+                 "Due To Overload, Only Channel Subscribers Can Use This Bot!",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -59,7 +59,7 @@ async def handle_force_sub(bot: Client, cmd: Message):
     except Exception:
         await bot.send_message(
             chat_id=cmd.from_user.id,
-            text="Something went Wrong. Contact my [𝙎𝙪𝙥𝙥𝙤𝙧𝙩 𝙂𝙧𝙤𝙪𝙥](https://t.me/VJ_Bot_Disscussion).",
+            text="Something Went Wrong. Contact My [𝗢𝘄𝗻𝗲𝗿](https://t.me/DRDIC).",
             disable_web_page_preview=True
         )
         return 200
