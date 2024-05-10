@@ -21,15 +21,14 @@ class Config(object):
 This Is A Permanent FileStore Bot. 
 Send Me Any Media Or File. I Can Work In Channel Too. Add Me To Channel With Edit Permission, I Will Add Save Uploaded File In Channel And Share A Shareable Link. 
 
-╭────[ 🔅FɪʟᴇSᴛᴏʀᴇBᴏᴛ🔅]────⍟
-│
-├🔸 My Name ☞ [Infinity File Saver](https://t.me/{BOT_USERNAME})
-│
-├🔸 Language ☞ [Python 3](https://www.python.org)
-│
-├🔹 Library ☞ [Pyrogram](https://docs.pyrogram.org)
-│
-╰──────[ 😎 ]───────────⍟
+★ 𝗔𝗯𝗼𝘂𝘁 𝗜𝗻𝗳𝗶𝗻𝗶𝘁𝘆 𝗙𝗶𝗹𝗲 𝗦𝗮𝘃𝗲𝗿 
+🔸 My Name ☞ [Infinity File Saver](https://t.me/{BOT_USERNAME})
+🔸 Language ☞ [Python 3](https://www.python.org)
+🔹 Library ☞ [Pyrogram](https://docs.pyrogram.org)
+
+𒊹 𝗝𝗼𝗶𝗻 ☞ @Infinity_Backup
+𒊹 𝗕𝗼𝘁 𝗕𝘆 ☞ @DRDIC
+
 """
   ABOUT_DEV_TEXT = f"""
 🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [DEAD](https://telegram.me/DRDIC)
