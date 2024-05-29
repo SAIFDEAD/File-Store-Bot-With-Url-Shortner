@@ -19,11 +19,13 @@ class Config(object):
   OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
   ABOUT_BOT_TEXT = f"""
 **𝖳𝗁𝗂𝗌 𝖨𝗌 𝖠 𝖯𝖾𝗋𝗆𝖺𝗇𝖾𝗇𝗍 𝖥𝗂𝗅𝖾 𝖲𝖺𝗏𝖾𝗋 𝖡𝗈𝗍.**
+
 ➜ 𝖲𝖾𝗇𝖽 𝖬𝖾 𝖠𝗇𝗒 𝖥𝗂𝗅𝖾 𝖳𝗈 𝖦𝖾𝗍 𝖲𝗁𝖺𝗋𝖾𝖺𝖻𝗅𝖾 𝖫𝗂𝗇𝗄.
 ➜ 𝖶𝗈𝗋𝗄𝗌 𝖨𝗇 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖳𝗈𝗈.
 ➜ 𝖠𝗏𝗈𝗂𝖽 **𝖢𝗈𝗉𝗒𝗋𝗂𝗀𝗁𝗍 𝖨𝗇𝖿𝗋𝗂𝗇𝗀𝖾𝗆𝖾𝗇𝗍.**
 
-★ 𝗔𝗯𝗼𝘂𝘁 𝗙𝗶𝗹𝗲 𝗦𝗮𝘃𝗲𝗿 ‼
+★ 𝗔𝗯𝗼𝘂𝘁 𝗙𝗶𝗹𝗲 𝗦𝗮𝘃𝗲𝗿
+
 ๏ **𝖡𝗈𝗍 𝖭𝖺𝗆𝖾** ➜ [𝖥𝗂𝗅𝖾 𝖲𝖺𝗏𝖾𝗋](https://t.me/{BOT_USERNAME})
 ๏ **𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾** ➜ [𝖯𝗒𝗍𝗁𝗈𝗇](https://www.python.org)
 ๏ **𝖫𝗂𝖻𝗋𝖺𝗋𝗒** ➜ [𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆](https://docs.pyrogram.org)
