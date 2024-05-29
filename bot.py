@@ -58,7 +58,7 @@ async def _(bot: Client, cmd: Message):
 async def start(bot: Client, cmd: Message):
 
     if cmd.from_user.id in Config.BANNED_USERS:
-        await cmd.reply_text("Sorry, You Are Banned.")
+        await cmd.reply_text("𝖲𝗈𝗋𝗋𝗒, 𝖸𝗈𝗎 𝖠𝗋𝖾 𝖡𝖺𝗇𝗇𝖾𝖽.")
         return
     if Config.UPDATES_CHANNEL is not None:
         back = await handle_force_sub(bot, cmd)
@@ -74,16 +74,16 @@ async def start(bot: Client, cmd: Message):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/Infinity_Backup")
+                        InlineKeyboardButton("𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Infinity_Backup")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs"),
-                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
+                        InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍", callback_data="aboutbot"),
+                        InlineKeyboardButton("𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", callback_data="aboutdevs"),
+                        InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾", callback_data="closeMessage")
                     ],
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/InfinityRobots"),
-                        InlineKeyboardButton("Contact Developer", url="https://t.me/DRDIC")
+                        InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉", url="https://t.me/InfinityRobots"),
+                        InlineKeyboardButton("𝖢𝗈𝗇𝗍𝖺𝖼𝗍", url="https://t.me/DRDIC")
                     ]
                 ]
             )
@@ -124,7 +124,7 @@ async def main(bot: Client, message: Message):
                 return
 
         if message.from_user.id in Config.BANNED_USERS:
-            await message.reply_text("Sorry, You Are banned!\n\nContact [𝗢𝘄𝗻𝗲𝗿](https://t.me/DRDIC)",
+            await message.reply_text("𝖲𝗈𝗋𝗋𝗒, 𝖸𝗈𝗎 𝖠𝗋𝖾 𝖡𝖺𝗇𝗇𝖾𝖽!\n\n𝖢𝗈𝗇𝗍𝖺𝖼𝗍 [**𝖮𝖶𝖭𝖤𝖱**](https://t.me/DRDIC)",
                                      disable_web_page_preview=True)
             return
 
@@ -132,10 +132,10 @@ async def main(bot: Client, message: Message):
             return
 
         await message.reply_text(
-            text="**Choose An Option From Below:**",
+            text="**𝖢𝗁𝗈𝗈𝗌𝖾 𝖠𝗇 𝖮𝗉𝗍𝗂𝗈𝗇 𝖥𝗋𝗈𝗆 𝖡𝖾𝗅𝗈𝗐:**",
             reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("Save In Batch", callback_data="addToBatchTrue")],
-                [InlineKeyboardButton("Get Sharable Link", callback_data="addToBatchFalse")]
+                [InlineKeyboardButton("𝖲𝖺𝗏𝖾 𝖨𝗇 𝖡𝖺𝗍𝖼𝗁", callback_data="addToBatchTrue")],
+                [InlineKeyboardButton("𝖦𝖾𝗍 𝖲𝗁𝖺𝗋𝖾𝖺𝖻𝗅𝖾 𝖫𝗂𝗇𝗄", callback_data="addToBatchFalse")]
             ]),
             quote=True,
             disable_web_page_preview=True
@@ -152,17 +152,17 @@ async def main(bot: Client, message: Message):
         try:
             forwarded_msg = await message.forward(Config.DB_CHANNEL)
             file_er_id = str(forwarded_msg.id)
-            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=VJBotz_{str_to_b64(file_er_id)}"
+            share_link = f"https://t.me/{Config.BOT_USERNAME}?start=InfinityRobots_{str_to_b64(file_er_id)}"
             CH_edit = await bot.edit_message_reply_markup(message.chat.id, message.id,
                                                           reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(
-                                                              "Get Sharable Link", url=share_link)]]))
+                                                              "𝖦𝖾𝗍 𝖲𝗁𝖺𝗋𝖾𝖺𝖻𝗅𝖾 𝖫𝗂𝗇𝗄", url=share_link)]]))
             if message.chat.username:
                 await forwarded_msg.reply_text(
-                    f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/{message.chat.username}/{CH_edit.id}) Channel's Broadcasted File's Button Added!")
+                    f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/{message.chat.username}/{CH_edit.id}) 𝖢𝗁𝖺𝗇𝗇𝖾𝗅'𝗌 𝖡𝗋𝗈𝖺𝖽𝖼𝖺𝗌𝗍𝖾𝖽 𝖥𝗂𝗅𝖾'𝗌 𝖡𝗎𝗍𝗍𝗈𝗇 𝖠𝖽𝖽𝖾𝖽!")
             else:
                 private_ch = str(message.chat.id)[4:]
                 await forwarded_msg.reply_text(
-                    f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/c/{private_ch}/{CH_edit.id}) Channel's Broadcasted File's Button Added!")
+                    f"#CHANNEL_BUTTON:\n\n[{message.chat.title}](https://t.me/c/{private_ch}/{CH_edit.id}) 𝖢𝗁𝖺𝗇𝗇𝖾𝗅'𝗌 𝖡𝗋𝗈𝖺𝖽𝖼𝖺𝗌𝗍𝖾𝖽 𝖥𝗂𝗅𝖾'𝗌 𝖡𝗎𝗍𝗍𝗈𝗇 𝖠𝖽𝖽𝖾𝖽!")
         except FloodWait as sl:
             await asyncio.sleep(sl.value)
             await bot.send_message(
@@ -188,7 +188,7 @@ async def broadcast_handler_open(_, m: Message):
 async def sts(_, m: Message):
     total_users = await db.total_users_count()
     await m.reply_text(
-        text=f"**Total Users in DB:** `{total_users}`",
+        text=f"**𝖳𝗈𝗍𝖺𝗅 𝖴𝗌𝖾𝗋𝗌 𝖨𝗇 𝖣𝖡:** `{total_users}`",
         quote=True
     )
 
@@ -318,12 +318,12 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes Of Bot",
+                        InlineKeyboardButton("𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾𝗌 𝖮𝖿 𝖡𝗈𝗍",
                                              url="https://t.me/InfinityRobots")
                     ],
                     [
-                        InlineKeyboardButton("Go Home", callback_data="gotohome"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                        InlineKeyboardButton("𝖧𝗈𝗆𝖾", callback_data="gotohome"),
+                        InlineKeyboardButton("𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", callback_data="aboutdevs")
                     ]
                 ]
             )
@@ -336,12 +336,12 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Source Codes Of Bot",
+                        InlineKeyboardButton("𝖲𝗈𝗎𝗋𝖼𝖾 𝖢𝗈𝖽𝖾𝗌 𝖮𝖿 𝖡𝗈𝗍",
                                              url="https://t.me/InfinityRobots")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("Go Home", callback_data="gotohome")
+                        InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍", callback_data="aboutbot"),
+                        InlineKeyboardButton("𝖧𝗈𝗆𝖾", callback_data="gotohome")
                     ]
                 ]
             )
@@ -354,16 +354,16 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/Infinity_Backup")
+                        InlineKeyboardButton("𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Infinity_Backup")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs"),
-                        InlineKeyboardButton("Close 🚪", callback_data="closeMessage")
+                        InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍", callback_data="aboutbot"),
+                        InlineKeyboardButton("𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", callback_data="aboutdevs"),
+                        InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾", callback_data="closeMessage")
                     ],
                     [
-                        InlineKeyboardButton("Support Group", url="https://t.me/InfinityRobots"),
-                        InlineKeyboardButton("Developer", url="https://t.me/DRDIC")
+                        InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉", url="https://t.me/InfinityRobots"),
+                        InlineKeyboardButton("𝖢𝗈𝗇𝗍𝖺𝖼𝗍", url="https://t.me/DRDIC")
                     ]
                 ]
             )
@@ -386,14 +386,14 @@ async def button(bot: Client, cmd: CallbackQuery):
             except UserNotParticipant:
                 invite_link = await get_invite_link(channel_chat_id)
                 await cmd.message.edit(
-                    text="**I Like Your Smartness But Don't Be Oversmart! 😑**\n\n",
+                    text="**𝖨 𝖫𝗂𝗄𝖾 𝖸𝗈𝗎𝗋 𝖲𝗆𝖺𝗋𝗍𝗇𝖾𝗌𝗌 𝖡𝗎𝗍 𝖣𝗈𝗇'𝗍 𝖡𝖾 𝖮𝗏𝖾𝗋𝗌𝗆𝖺𝗋𝗍 😑**\n\n",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                                InlineKeyboardButton("🤖 𝖩𝗈𝗂𝗇 𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton("🔄 Refresh 🔄", callback_data="refreshmeh")
+                                InlineKeyboardButton("🔄 𝖱𝖾𝖿𝗋𝖾𝗌𝗁 🔄", callback_data="refreshmeh")
                             ]
                         ]
                     )
@@ -401,7 +401,7 @@ async def button(bot: Client, cmd: CallbackQuery):
                 return
             except Exception:
                 await cmd.message.edit(
-                    text="Something went Wrong. Contact my [𝗢𝘄𝗻𝗲𝗿](https://t.me/DRDIC).",
+                    text="𝖲𝗈𝗆𝖾𝗍𝗁𝗂𝗇𝗀 𝖶𝖾𝗇𝗍 𝖶𝗋𝗈𝗇𝗀 𝖢𝗈𝗇𝗍𝖺𝖼𝗍 𝖬𝗒 [**𝖮𝖶𝖭𝖤𝖱**](https://t.me/DRDIC).",
                     disable_web_page_preview=True
                 )
                 return
@@ -411,12 +411,12 @@ async def button(bot: Client, cmd: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Updates Channel", url="https://t.me/Infinity_Backup"),
-                        InlineKeyboardButton("Support Group", url="https://t.me/InfinityRobots")
+                        InlineKeyboardButton("𝖴𝗉𝖽𝖺𝗍𝖾𝗌 𝖢𝗁𝖺𝗇𝗇𝖾𝗅", url="https://t.me/Infinity_Backup"),
+                        InlineKeyboardButton("𝖲𝗎𝗉𝗉𝗈𝗋𝗍 𝖦𝗋𝗈𝗎𝗉", url="https://t.me/InfinityRobots")
                     ],
                     [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
+                        InlineKeyboardButton("𝖠𝖻𝗈𝗎𝗍 𝖡𝗈𝗍", callback_data="aboutbot"),
+                        InlineKeyboardButton("𝖣𝖾𝗏𝖾𝗅𝗈𝗉𝖾𝗋", callback_data="aboutdevs")
                     ]
                 ]
             )
@@ -442,10 +442,10 @@ async def button(bot: Client, cmd: CallbackQuery):
         file_id = cmd.message.reply_to_message.id
         MediaList[f"{str(cmd.from_user.id)}"].append(file_id)
         await cmd.message.edit("File Saved in Batch!\n\n"
-                               "Press below button to get batch link.",
+                               "𝖯𝗋𝖾𝗌𝗌 𝖡𝖾𝗅𝗈𝗐 𝖡𝗎𝗍𝗍𝗈𝗇 𝖳𝗈 𝖦𝖾𝗍 𝖡𝖺𝗍𝖼𝗁 𝖫𝗂𝗇𝗄.",
                                reply_markup=InlineKeyboardMarkup([
-                                   [InlineKeyboardButton("Get Batch Link", callback_data="getBatchLink")],
-                                   [InlineKeyboardButton("Close Message", callback_data="closeMessage")]
+                                   [InlineKeyboardButton("𝖦𝖾𝗍 𝖡𝖺𝗍𝖼𝗁 𝖫𝗂𝗇𝗄", callback_data="getBatchLink")],
+                                   [InlineKeyboardButton("𝖢𝗅𝗈𝗌𝖾 𝖬𝖾𝗌𝗌𝖺𝗀𝖾", callback_data="closeMessage")]
                                ]))
 
     elif "addToBatchFalse" in cb_data:
@@ -469,3 +469,4 @@ async def button(bot: Client, cmd: CallbackQuery):
 
 
 Bot.run()
+  
