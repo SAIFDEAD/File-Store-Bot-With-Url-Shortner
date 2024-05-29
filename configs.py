@@ -18,29 +18,31 @@ class Config(object):
   BANNED_CHAT_IDS = list(set(int(x) for x in os.environ.get("BANNED_CHAT_IDS", "").split()))
   OTHER_USERS_CAN_SAVE_FILE = bool(os.environ.get("OTHER_USERS_CAN_SAVE_FILE", True))
   ABOUT_BOT_TEXT = f"""
-This Is A Permanent FileStore Bot. 
-Send Me Any Media Or File. I Can Work In Channel Too. Add Me To Channel With Edit Permission, I Will Add Save Uploaded File In Channel And Share A Shareable Link. 
+**𝖳𝗁𝗂𝗌 𝖨𝗌 𝖠 𝖯𝖾𝗋𝗆𝖺𝗇𝖾𝗇𝗍 𝖥𝗂𝗅𝖾 𝖲𝖺𝗏𝖾𝗋 𝖡𝗈𝗍.**
+➜ 𝖲𝖾𝗇𝖽 𝖬𝖾 𝖠𝗇𝗒 𝖥𝗂𝗅𝖾 𝖳𝗈 𝖦𝖾𝗍 𝖲𝗁𝖺𝗋𝖾𝖺𝖻𝗅𝖾 𝖫𝗂𝗇𝗄.
+➜ 𝖶𝗈𝗋𝗄𝗌 𝖨𝗇 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖳𝗈𝗈.
+➜ 𝖠𝗏𝗈𝗂𝖽 **𝖢𝗈𝗉𝗒𝗋𝗂𝗀𝗁𝗍 𝖨𝗇𝖿𝗋𝗂𝗇𝗀𝖾𝗆𝖾𝗇𝗍.**
 
-★ 𝗔𝗯𝗼𝘂𝘁 𝗜𝗻𝗳𝗶𝗻𝗶𝘁𝘆 𝗙𝗶𝗹𝗲 𝗦𝗮𝘃𝗲𝗿 
-🔸 My Name ☞ [Infinity File Saver](https://t.me/{BOT_USERNAME})
-🔸 Language ☞ [Python 3](https://www.python.org)
-🔹 Library ☞ [Pyrogram](https://docs.pyrogram.org)
+★ 𝗔𝗯𝗼𝘂𝘁 𝗙𝗶𝗹𝗲 𝗦𝗮𝘃𝗲𝗿 ‼
+๏ **𝖡𝗈𝗍 𝖭𝖺𝗆𝖾** ➜ [𝖥𝗂𝗅𝖾 𝖲𝖺𝗏𝖾𝗋](https://t.me/{BOT_USERNAME})
+๏ **𝖫𝖺𝗇𝗀𝗎𝖺𝗀𝖾** ➜ [𝖯𝗒𝗍𝗁𝗈𝗇](https://www.python.org)
+๏ **𝖫𝗂𝖻𝗋𝖺𝗋𝗒** ➜ [𝖯𝗒𝗋𝗈𝗀𝗋𝖺𝗆](https://docs.pyrogram.org)
 
 𒊹 𝗝𝗼𝗶𝗻 ☞ @Infinity_Backup
-𒊹 𝗕𝗼𝘁 𝗕𝘆 ☞ @DRDIC
+𒊹 𝗢𝘄𝗻𝗲𝗿 ☞ @DRDIC
 
 """
   ABOUT_DEV_TEXT = f"""
-🧑🏻‍💻 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿: [DEAD](https://telegram.me/DRDIC)
+๏ 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗿 ➜ [𝖨𝗍𝖺𝖼𝗁𝗂 𝖴𝖼𝗁𝗂𝗁𝖺](https://telegram.me/DRDIC)
  
-[Want To Talk With Me !](https://t.me/DRDIC)
 """
   HOME_TEXT = """
-Hello, [{}](tg://user?id={})\n\nThis Is A Permanent **FileStore Bot**.
+𝖧𝖾𝗒 , [{}](tg://user?id={})\n\n𝖳𝗁𝗂𝗌 𝖨𝗌 𝖠 𝖯𝖾𝗋𝗆𝖺𝗇𝖾𝗇𝗍 **𝖥𝗂𝗅𝖾 S𝖺𝗏𝖾𝗋 𝖡𝗈𝗍.**
 
-How to Use Bot & It's Benefits??
+➜ 𝗛𝗼𝘄 𝗧𝗼 𝗨𝘀𝗲 𝗕𝗼𝘁 ?
+๏ 𝖲𝖾𝗇𝖽 𝖬𝖾 𝖠𝗇𝗒 𝖥𝗂𝗅𝖾 𝖠𝗇𝖽 𝖨𝗍 𝖶𝗂𝗅𝗅 𝖡𝖾 𝖴𝗉𝗅𝗈𝖺𝖽𝖾𝖽 𝖨𝗇 𝖬𝗒 𝖣𝖺𝗍𝖺𝖻𝖺𝗌𝖾 𝖠𝗇𝖽 𝖸𝗈𝗎 𝖶𝗂𝗅𝗅 𝖦𝖾𝗍 𝖳𝗁𝖾 𝖥𝗂𝗅𝖾 𝖫𝗂𝗇𝗄.
 
-📢 Send Me Any File & It Will Be Uploaded In My Database & You Will Get The File Link.
-
-⚠️ Benefits: If You Have A TeleGram Movie Channel Or Any Copyright Channel, Then Its Useful For Daily Usage, You Can Send Me Your File & I Will Send Permanent Link To You & Channel Will Be Safe From **CopyRight Infringement** Issue. I Support Channel Also You Can Check **About Bot**.
+➜ 𝗕𝗲𝗻𝗲𝗳𝗶𝘁𝘀 ?
+๏ 𝖨𝖿 𝖸𝗈𝗎 𝖧𝖺𝗏𝖾 𝖠 𝖳𝖾𝗅𝖾𝗀𝗋𝖺𝗆 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖮𝗋 𝖠𝗇𝗒 𝖢𝗈𝗉𝗒𝗋𝗂𝗀𝗁𝗍 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖳𝗁𝖾𝗇 𝖨𝗍 𝖨𝗌 𝖴𝗌𝖾𝖿𝗎𝗅 𝖥𝗈𝗋 𝖣𝖺𝗂𝗅𝗒 𝖴𝗌𝖺𝗀𝖾.
+๏ 𝖸𝗈𝗎𝗋 𝖢𝗁𝖺𝗇𝗇𝖾𝗅 𝖶𝗂𝗅𝗅 𝖡𝖾 𝖲𝖺𝖿𝖾 𝖥𝗋𝗈𝗆 **𝖢𝗈𝗉𝗒𝗋𝗂𝗀𝗁𝗍 𝖨𝗇𝖿𝗋𝗂𝗇𝗀𝖾𝗆𝖾𝗇𝗍** 𝖨𝗌𝗌𝗎𝖾𝗌.
 """
